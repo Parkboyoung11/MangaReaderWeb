@@ -6,11 +6,12 @@
         echo "<title>".$_GET['name']." Chap ".$_GET['cid']."</title>";
     ?>
     <link type="text/css" rel="stylesheet" href="http://sonvuhong.com/MangaReaderWeb/Detail/read.css">
+    <link rel="icon" href="../../Image/iconPage.gif" type="image/gif" >
 </head>
 <body>
     <header>
         <div class="reading-control">
-            <form action="http://sonvuhong.com/MangaReaderWeb/" method="get">
+            <form action="http://sonvuhong.com/MangaReaderWeb" method=" post">
                 <input type="submit" title="Home" name="home" class="homeBtn" value="Search">
                 <select name="chap" class="selectChap" id="chap" <?php echo "onchange=\"javascript:window.location.href='read.php?name=".$_GET['name']."&id=".$_GET['id']."&cid=' + this.options[this.selectedIndex].value + '';\""; ?>>
                     <?php

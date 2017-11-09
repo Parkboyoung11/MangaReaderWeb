@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Search Manga</title>
   <link type="text/css" rel="stylesheet" href="http://sonvuhong.com/MangaReaderWeb/styles.css">
+  <link rel="icon" href="../Image/iconPage.gif" type="image/gif" >
 </head>
 
 <body>

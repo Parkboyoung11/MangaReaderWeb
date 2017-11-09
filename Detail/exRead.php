@@ -6,6 +6,7 @@
         echo "<title>".$_GET['name']." Chap ".$_GET['cid']."</title>";
     ?>
     <link type="text/css" rel="stylesheet" href="http://sonvuhong.com/MangaReaderWeb/Detail/read.css">
+    <link rel="icon" href="../../Image/iconPage.gif" type="image/gif" >
 </head>
 <body>
     <header>
