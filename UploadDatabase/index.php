@@ -26,6 +26,20 @@
 					</div>
 					<div class="letsupload">
 						<label>Let's upload your database !</label>
+					</div>	
+					<div class="manganame">
+						<label id="tablelbl">Name</label>						<!--input name and manga url -->
+						<input type="text" name="name" id="tabletxt"><br>
+					</div>
+					<div class="linkmanga">
+						<label id="urllbl">MangaUrl</label>
+						<input type="text" name="linkmanga" id="urltxt"><br>
+					</div>
+					<div class="addManga">
+						<input type="submit" name="add" value="Add" id="uploadBtn">
+					</div>
+						<div class="letsupload">
+						<label>Add Manga</label>
 					</div>										
 				</form>
 			</div>
@@ -51,7 +65,21 @@
 							</div>
 							<div class="letsupload">
 								<label>Login Succeeded. Let's upload your database !</label>
-							</div>										
+							</div>
+							<div class="manganame">
+								<label id="tablelbl">Name</label>						<!--input name and manga url -->
+								<input type="text" name="name" id="tabletxt"><br>
+							</div>
+							<div class="linkmanga">
+								<label id="urllbl">MangaUrl</label>
+								<input type="text" name="linkmanga" id="urltxt"><br>
+							</div>
+							<div class="addManga">
+								<input type="submit" name="add" value="Add" id="uploadBtn">
+							</div>
+							<div class="letsupload">
+								<label>Add Manga</label>
+							</div>											
 						</form>
 					</div>
 				<?php
@@ -141,6 +169,21 @@
 			}
 			// $database = mysqli_connect("localhost","u739163159_sonvu","iloveyou","u739163159_manga");				
 		}
+		if (isset($_POST['add'])) {
+			if ($_POST['name'] == "" || $_POST['linkmanga'] == "") {
+				echo "<script>alert('Please Fill All TextField!');</script>";
+			}else {
+				$name = $_POST['name'];
+				$mangaUrl = $_POST['linkmanga'];
+				if ($tableID && $mangaUrl) {
+					$database = mysqli_connect("localhost","u739163159_sonvu","iloveyou","u739163159_manga");
+					if (!$database) {
+						die("Connection failed: " . mysqli_connect_error());
+					}
+				addManga($mangaUrl,$name);
+				}
+			}
+		}
 	}
 
 	function getlink($link, &$linkImage){
@@ -176,5 +219,48 @@
             $startContinue = $end;
         }
     }
+    function addManga($link,$name){
+    	$sauce = file_get_contents($link);   //get source
+    	$begin = strpos($sauce,'<p class="summary">');
+    	$end = strpos($sauce, "</p>",$begin);
+    	$pAuthor =strpos($sauce, 'Author(s)');
+    	//$pArtist = strpos($sauce, 'Artist(s)');
+    	$pGenre = strpos($sauce, 'Genre(s)');
+    	$pType= strpos($sauce, "Type",$pGenre);
+		$summary = substr($sauce, $begin,$end-$begin);
+		preg_match('\d\d\d\d(?=\<)', $sauce,$sth);
+		$release=$sth[0];
+		preg_match('(?<=\/c)[\d]{1,3}', $sauce,$sth);
+		$chapter=$sth[0];
+		preg_match('[\w -]{1,30}(?=\<)', substr($sauce, $pAuthor,$pGenre-$pAuthor),$sth);
+		$Author=$sth[0];
+		$Artist=$sth[1];
+		if ($Author!=$Artist) {
+			$Author=$Author.' ;'.$Artist;
+		}
+		preg_match('[\w ]{1,30}(?=\<\/\a)', substr($sauce, $pGenre,$pType-$pGenre),$sth);
+		$genre = join(' ;',$sth);
+		preg_match('https?:[-a-zA-Z0-9@:%_\+.~#?&=\/]*(?=" width=)', $sauce,$sth);
+		$linkImage=$sth[0];
+		if (strpos(substr($sauce, strpos($sauce, '<th>Status</th>',100)), 'Ongoing')) {
+			$Status='0';
+		} else {
+			$Status='1';
+		}
+		preg_match('[\w -]{1,30}(?=)', $sauce,$sth);
+
+		$addM = "INSERT INTO MainTable VALUES ('".$name."', '".$release."', '".$Genre."','".$Status."','".$chapter."','".$summary."','".$Author."','".$linkImage."')";
+		print_r($addM);
+		$query = mysqli_query($database, $sqlUpdate);
+		$id = (string)mysql_insert_id();
+		$newTable = "CREATE TABLE Manga".$id.'(
+  `ImageLink` varchar(10000) COLLATE utf8_unicode_ci NOT NULL,
+  `cName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `cID` varchar(4) COLLATE utf8_unicode_ci NOT NULL
+)"';
+    }
+
+
 ?>
+
 
