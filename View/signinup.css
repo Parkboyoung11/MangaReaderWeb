@@ -1,0 +1,101 @@
+body {background-color: #f9f9f9; font:12px "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;min-width:1010px;line-height:1;}
+
+.header-body {
+	padding: 32px 0 0 0;
+	text-align: center;
+}
+.signInLabel {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 300;
+    letter-spacing: -0.5px;
+}
+.mainContent {
+	height: 193px;
+	width: 266px;
+	border: 1px solid #d8dee2;
+    border-radius: 5px;
+    margin: auto;
+    padding: 20px;
+    font-size: 14px;
+    background-color: #fff;
+}
+.mainContentUp {
+    height: 270px;
+    width: 266px;
+    border: 1px solid #d8dee2;
+    border-radius: 5px;
+    margin: auto;
+    padding: 20px;
+    font-size: 14px;
+    background-color: #fff;
+}
+.mainContentForgot {
+    height: 145px;
+    width: 266px;
+    border: 1px solid #d8dee2;
+    border-radius: 5px;
+    margin: auto;
+    padding: 20px;
+    font-size: 14px;
+    background-color: #fff;
+}
+.userNameLabel, .passwordLabel, .emailLabel {
+	font-weight: 600;
+	font-size: 14px;
+}
+
+#username, #password, #email {
+	margin-top: 12px;
+    margin-bottom: 15px;
+    width: 248px;
+    min-height: 24px;
+    padding: 6px 8px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #24292e;
+    vertical-align: middle;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
+}
+.forgotPass {
+	float: right;
+	font-size: 12px;
+	text-decoration: none;
+	color: #0366d6;
+}
+#signButton {
+	margin-top: 5px;
+	width: 100%; 
+    color: #fff;
+    background-color: #28a745;
+    background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);    
+    padding: 6px 12px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;    
+    border: 1px solid rgba(27,31,35,0.2);
+    border-radius: 0.25em;
+}
+
+.changeSign {
+	width: 308px;
+	font-size: 13px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px 20px;
+    text-align: center;
+    border: 1px solid #d8dee2;
+    border-radius: 5px;
+    margin-top: 16px !important;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.changeCreate {
+	text-decoration: none;
+	color: #0366d6;
+}

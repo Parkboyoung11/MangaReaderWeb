@@ -1,0 +1,239 @@
+/* CSS Document */
+body{
+	background:#fff;
+}
+*{
+	padding:0;
+	margin:0;
+}
+table{
+	border-collapse:collapse;
+	width:100%;
+	margin: auto;
+	background-color: transparent;
+	border:2px solid gray;
+}
+textarea{
+	width:100%;
+	
+	resize:auto;
+	
+}
+table tr td{
+	color:#000;
+	font-size:30px;
+	padding:4px 10px;
+}
+input{
+	width:96%;
+	height:36px;
+	padding: 0 10px;
+	font-size: 25px;
+}
+
+.selectDepart {
+	width:40%;
+	height:42px;
+	font-size: 30px;
+}
+
+.selectPosition {
+	padding: 6px 10px 12px 10px; 
+	background-color: rgba(0,0,0,0.7);
+	font-weight: bold;
+	color: white;
+	border: 2px solid gray;
+}
+
+.creatButton {
+	font-size: 35px;
+	color: darkorange;
+	width: 100%;
+	height: 44px;
+	background-color: rgba(0,0,0,0.5);
+	font-weight: bold;
+	/*color: white;*/
+	border: 2px solid gray;
+	/*padding: 2px 0;*/
+}
+
+.creatButtonTD {
+	padding: 0;
+	background-color: rgba(0,0,0,0.5);
+	font-weight: bold;
+	/*color: white;*/
+	border: 2px solid gray;
+}
+
+.inputCSS {
+	width: 624px;
+	height:40px;
+	padding: 0 10px;
+	font-size: 25px;
+	background-color: rgba(0,0,0,0.5);
+	border: 2px solid gray;
+	color: white;
+}
+
+.inputTD {
+	padding: 0;
+	background-color: rgba(0,0,0,0.5);
+	font-weight: bold;
+	border: 2px solid gray;
+	color: white;
+}
+
+.wrapper{
+	width:900px;
+	height:auto;
+	margin:auto;
+}
+.menu{
+	width:100%;
+	height:40px;
+	margin-top:2px;
+	background:white;
+	/*opacity: 0.4;*/
+}
+.menu ul{
+	width:100%;
+	list-style:none;
+}
+.menu ul li{
+	width:250px;
+	text-align:center;
+	float:left;
+	line-height:40px;
+	border-right: 1px solid #000000;
+}
+.menu ul li a{
+	display:block;
+	color:gray;
+	text-decoration:none;
+	font-size:25px;
+}
+.menu li:hover{
+	background:#CCC;
+	
+}
+.header{
+	width:100%;
+	height:120px;
+	
+	text-align:center;
+	line-height:120px;
+	font-size:40px;
+	color:red;
+	
+}
+.content{
+	width:100%;
+	height:auto;
+	
+	margin-top:2px;
+	
+}
+.box_contains{
+	width:100%;
+	height:auto;
+	
+	margin:auto;
+}
+.footer{
+	width:100%;
+	height:120px;
+	
+	text-align:center;
+	line-height:120px;
+	font-size:40px;
+	color:#F90;
+	margin-top:5px;
+	
+	
+}
+.clear{
+	clear:both;
+}
+.button_themsp{
+	width:40px;
+	height:40px;
+	border:1px solid #000;
+	text-align:center;
+	background:#069;
+	line-height:40px;
+	color:#fff;
+	float:right;
+}
+.button_themsp a{
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	font-size: 35px;
+}
+
+.subTitle {
+	border: 2px solid gray;
+	text-align: center;
+	color: red;
+    font-size: 25px;
+    padding: 4px;
+    background-color: rgba(0,0,0,0.9);
+    font-weight: bold;
+}
+
+.contentTable {
+	background-color: rgba(0,0,0,0.5);
+	border: 2px solid gray;
+	color: white;
+	text-align: center;
+    font-size: 19px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.page{
+	width:auto;
+	height:30px;
+	
+	font-size:25px;
+	padding-left:10px;
+	color:darkorange;
+	margin-top:2px;
+	background: rgba(0,0,0,0.6);
+}
+#timkiem{
+	width:200px;
+	height:27px;
+	border:1px solid #CCC;
+	margin-top:2px;
+}
+#button_timkiem{
+	width:100px;
+	height:30px;
+	background:blue;
+	color:#fff;
+	font-size:15px;
+}
+
+/*Add Plus*/
+.keywordBox {
+	border: 0 !important;
+	background-color: transparent;
+}
+
+.manageTool {
+	background-color: rgba(255,255,255,0.6);
+	border: 2px solid gray;
+}
+
+.tdAdd {
+	background-color: rgba(0,0,0,0.5);
+	font-weight: bold;
+	color: white;
+	border: 2px solid gray;
+}
+
+::placeholder {
+    color: black;
+    opacity: 1;
+}

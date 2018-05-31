@@ -1,0 +1,40 @@
+/* CSS Document */
+body{
+	background:#292931;
+}
+#login{
+	position:absolute;
+	top:40%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+#login h2{
+	text-align:center;
+	color:white;
+	font-family:sans-senif;
+	font-size:35px;
+}
+
+#login input {
+	display:block;
+	width:320px;
+	height:40px;
+	padding:3px 10px;
+	font-size:18px;
+	font-family:sans-senif;
+	color:white;
+	background:rgba(0,0,0,0.3);
+	outline:none;
+	border:1px solid rgba(0,0,0,0.3);
+	border-radius:5px;
+	box-shadow:inset 0px -5px 45px rgba(100,100,100,0.2),0px 1px 1px rgba(200,200,200,0.2);
+	margin-bottom:10px;
+}
+
+#login #button{
+	background:#55acee;
+	font-size:18px;
+	text-align:center;
+	vertical-align:middle;
+	width:100%;
+}
